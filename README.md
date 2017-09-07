@@ -12,7 +12,7 @@
 
 ## Features
 
-The module features
+Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtjs.org) application.
 
 ## Setup
 - Add `@nuxtjs/router-module` dependency using `yarn` or `npm` to your project
