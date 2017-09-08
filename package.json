@@ -1,5 +1,5 @@
 {
-  "name": "@nuxtjs/router-module",
+  "name": "@nuxtjs/router",
   "version": "1.0.0",
   "description": "Nuxt module to use router.js instead of pages/ directory",
   "license": "MIT",

@@ -17,17 +17,14 @@
 The module features
 
 ## Setup
-- Add `@nuxtjs/router-module` dependency using `yarn` or `npm` to your project
-- Add `@nuxtjs/router-module` to `modules` section of `nuxt.config.js`
+
+1. Install `@nuxtjs/router` dependency with `yarn` or `npm` into your project
+2. Add `@nuxtjs/router` to `modules` section of `nuxt.config.js`:
 
 ```js
 {
   modules: [
-    // Simple usage
-    '@nuxtjs/router-module',
-
-    // With options
-    ['@nuxtjs/router-module', { /* module options */ }],
+    '@nuxtjs/router'
  ]
 }
 ```
