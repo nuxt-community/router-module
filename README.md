@@ -3,18 +3,16 @@
 [![npm](https://img.shields.io/npm/dt/@nuxtjs/router-module.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/router-module)
 [![CircleCI](https://img.shields.io/circleci/project/github/nuxt-community/router-module.svg?style=flat-square)](https://circleci.com/gh/nuxt-community/router-module)
 [![Codecov](https://img.shields.io/codecov/c/github/nuxt-community/router-module.svg?style=flat-square)](https://codecov.io/gh/nuxt-community/router-module)
-[![Dependencies](https://david-dm.org/nuxt-community/router-module/status.svg?style=flat-square)](https://david-dm.org/nuxt-community/router-module)
-
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
 
 > Nuxt module to use router.js instead of pages/ directory
 
-[📖 **Release Notes**](./CHANGELOG.md)
+[📖 **Release Notes**](https://github.com/nuxt-community/router-module/releases)
 
 ## Features
 
-The module features
+Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtjs.org) application.
 
 ## Setup
 
