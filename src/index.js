@@ -8,7 +8,9 @@ export default function () {
   if (!existsSync(routerPath)) throw new Error('[nuxt-router-module] Please create a router.js file in your source folder.')
 
   // Disable parsing `pages/`
-  this.nuxt.options.build.createRoutes = () => {}
+  this.nuxt.options.build.createRoutes = () => {
+    return []
+  }
 
   // Add ${srcDir}/router.js as the main template for routing
   this.addTemplate({
