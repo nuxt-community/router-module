@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "jest-cli": "^21.0.2",
     "nuxt-module-builder": "latest"
   }
 }
