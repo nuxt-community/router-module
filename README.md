@@ -33,7 +33,7 @@ Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtj
 {
   generate: {
     routes: [
-      "/"
+      '/'
     ]
   }
 }
