@@ -30,10 +30,12 @@ Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtj
 3. If you are using SPA mode, you will need to generate an index route in `nuxt.config.js`:
 
 ```js
-generate: {
-  routes: [
-    "/"
-  ]
+{
+  generate: {
+    routes: [
+      "/"
+    ]
+  }
 }
 ```
 
