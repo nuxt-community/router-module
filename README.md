@@ -23,7 +23,17 @@ Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtj
 {
   modules: [
     '@nuxtjs/router'
- ]
+  ]
+}
+```
+
+or
+
+```js
+{
+  modules: [
+    ['@nuxtjs/router', { keepDefaultRouter: true }]
+  ]
 }
 ```
 
@@ -69,6 +79,27 @@ export function createRouter() {
       }
     ]
   })
+}
+```
+
+### Accessing default router
+
+If you use the module with `{ keepDefaultRouter: true }`, you can access the default router:
+
+```js
+import { createRouter as createDefaultRouter } from './defaultRouter'
+
+export function createRouter(ssrContext) {
+  const defaultRouter = createDefaultRouter(ssrContext)
+  return new Router({
+    ...defaultRouter.options,
+    routes: fixRoutes(defaultRouter.options.routes)
+  })
+}
+
+function fixRoutes(defaultRoutes) {
+  // default routes that come from `pages/`
+  return defaultRoutes.filter(...).map(...)
 }
 ```
 
