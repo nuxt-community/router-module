@@ -1,5 +1,7 @@
+const { resolve } = require('path')
+
 module.exports = {
   srcDir: __dirname,
   dev: false,
-  modules: ['~/../..']
+  modules: [resolve(__dirname, '../../../')]
 }

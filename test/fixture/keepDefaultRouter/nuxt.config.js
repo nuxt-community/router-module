@@ -1,5 +1,9 @@
+const { resolve } = require('path')
+
 module.exports = {
   srcDir: __dirname,
   dev: false,
-  modules: [['~/../..', { keepDefaultRouter: true }]]
+  modules: [
+    [resolve(__dirname, '../../../'), { keepDefaultRouter: true }]
+  ]
 }
