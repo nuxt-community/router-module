@@ -1,16 +1,20 @@
 import { resolve } from 'path'
 import { existsSync } from 'fs'
 
-export default function (options) {
-  const defaults = {
+export default function (moduleOptions) {
+  const defaultOptions = {
+    path: this.options.srcDir,
+    filename: 'router.js',
     keepDefaultRouter: false
   }
-  options = Object.assign({}, defaults, options)
 
-  const routerPath = resolve(options.dir || this.options.srcDir, options.fileName || 'router.js')
+  const options = Object.assign({}, defaultOptions, this.options.routerModule, moduleOptions)
 
-  // Check if router.js is defined
-  if (!existsSync(routerPath)) throw new Error('[nuxt-router-module] Please create a router.js file in your source folder.')
+  const routerFilePath = resolve(options.path, options.filename)
+  
+  // Check if router file path is defined
+  if (!existsSync(routerFilePath))
+    throw new Error(`[nuxt-router-module] Please create a ${options.filename} file in your source folder.`)
 
   if (options.keepDefaultRouter) {
     // Put default router as .nuxt/defaultRouter.js
@@ -25,9 +29,9 @@ export default function (options) {
     }
   }
 
-  // Add ${srcDir}/router.js as the main template for routing
+  // Add router file path as the main template for routing
   this.addTemplate({
     fileName: 'router.js',
-    src: routerPath
+    src: routerFilePath
   })
 }
