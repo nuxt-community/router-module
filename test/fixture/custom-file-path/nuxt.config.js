@@ -6,6 +6,6 @@ module.exports = {
   modules: ['@@'],
   routerModule: {
     path: join(__dirname, 'routes'),
-    filename: 'index.js'
+    fileName: 'index.js'
   }
 }
