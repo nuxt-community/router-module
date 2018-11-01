@@ -1,9 +1,10 @@
 const { resolve } = require('path')
 
 module.exports = {
+  buildDir: resolve(__dirname, '.nuxt'),
   srcDir: __dirname,
-  dev: false,
-  modules: [
-    [resolve(__dirname, '../../../'), { keepDefaultRouter: true }]
-  ]
+  modules: ['@@'],
+  routerModule: {
+    keepDefaultRouter: true
+  }
 }
