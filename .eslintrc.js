@@ -1,1 +1,5 @@
-module.exports = require('nuxt-module-builder/eslint')
+module.exports = {
+  extends: [
+    '@nuxtjs'
+  ]
+}

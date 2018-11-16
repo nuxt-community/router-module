@@ -16,7 +16,7 @@ export default function (options) {
     // Put default router as .nuxt/defaultRouter.js
     this.addTemplate({
       fileName: 'defaultRouter.js',
-      src: require.resolve('nuxt/lib/app/router')
+      src: require.resolve('@nuxt/vue-app/template/router')
     })
   } else {
     // Disable parsing `pages/`
