@@ -82,6 +82,29 @@ export function createRouter() {
 }
 ```
 
+### Lazy Loading
+```js
+import Vue from 'vue'
+import Router from 'vue-router'
+import { interopDefault } from './.nuxt/utils'
+
+const MyPage = () => interopDefault(import('~/components/my-page.vue'))
+
+Vue.use(Router)
+
+export function createRouter() {
+  return new Router({
+    mode: 'history',
+    routes: [
+      {
+        path: '/',
+        component: MyPage
+      }
+    ]
+  })
+}
+```
+
 ### Accessing default router
 
 If you use the module with `{ keepDefaultRouter: true }`, you can access the default router:
