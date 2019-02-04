@@ -103,6 +103,9 @@ function fixRoutes(defaultRoutes) {
 }
 ```
 
+### Customize Routes Directory or Filename
+If you use the module with fileName `{fileName: 'my-router.js'}` and/or `{path: 'custom-dir'}` you can customize the location of you route files.
+
 ## License
 
 [MIT License](./LICENSE)

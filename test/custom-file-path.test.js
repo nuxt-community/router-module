@@ -3,9 +3,9 @@ const request = require('request-promise-native')
 
 jest.setTimeout(60000)
 
-const config = require('./fixture/ok/nuxt.config')
+const config = require('./fixture/custom-file-path/nuxt.config')
 
-const url = path => `http://localhost:4446${path}`
+const url = path => `http://localhost:4444${path}`
 const get = path => request(url(path))
 
 describe('Module', () => {
@@ -15,7 +15,7 @@ describe('Module', () => {
     config.dev = false
     nuxt = new Nuxt(config)
     await new Builder(nuxt).build()
-    await nuxt.listen(4446)
+    await nuxt.listen(4444)
   })
 
   afterAll(async () => {

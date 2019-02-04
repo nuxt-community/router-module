@@ -8,41 +8,41 @@
       "name": "Sebastien Chopin <seb@chopin.io>"
     }
   ],
-  "main": "dist/index.js",
+  "main": "lib/module.js",
   "repository": "https://github.com/nuxt-community/router-module",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "nuxt-module",
-    "watch": "nuxt-module --watch",
-    "lint": "eslint lib src",
-    "lint-fix": "eslint --fix lib src",
-    "test": "NODE_ENV=test npm run build && npm run lint && jest",
-    "release": "standard-version && git push --follow-tags && npm publish",
-    "prepare": "npm run build"
+    "lint": "eslint lib test",
+    "test": "npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish"
   },
   "eslintIgnore": [
-    "*.template.*"
+    "lib/plugin.js"
   ],
   "files": [
-    "lib",
-    "src",
-    "dist",
-    "templates"
+    "lib"
   ],
   "jest": {
     "testEnvironment": "node",
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "lib",
-      "src"
-    ]
+    "collectCoverage": true
   },
+  "dependencies": {},
   "devDependencies": {
-    "jest-cli": "^23.4.2",
-    "nuxt": "^1.4.2",
-    "nuxt-module-builder": "latest"
+    "babel-eslint": "^10.0.1",
+    "codecov": "^3.1.0",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "jest": "^23.6.0",
+    "jsdom": "^13.0.0",
+    "nuxt": "^2.2.0",
+    "standard-version": "^4.4.0"
   }
 }
