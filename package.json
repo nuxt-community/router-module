@@ -4,9 +4,8 @@
   "description": "Nuxt module to use router.js instead of pages/ directory",
   "license": "MIT",
   "contributors": [
-    {
-      "name": "Sebastien Chopin <seb@chopin.io>"
-    }
+    "Sebastien Chopin <seb@chopin.io>",
+    "Ricardo Gobbo de Souza <ricardogobbosouza@yahoo.com.br>"
   ],
   "main": "lib/module.js",
   "repository": "https://github.com/nuxt-community/router-module",
