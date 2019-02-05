@@ -24,26 +24,14 @@
   "babel": {
     "presets": [
       [
-        "env",
+        "@babel/preset-env",
         {
-          "modules": false
+          "targets": {
+            "esmodules": true
+          }
         }
       ]
-    ],
-    "env": {
-      "test": {
-        "presets": [
-          [
-            "env",
-            {
-              "targets": {
-                "node": "current"
-              }
-            }
-          ]
-        ]
-      }
-    }
+    ]
   },
   "jest": {
     "testEnvironment": "node",
@@ -57,9 +45,10 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
     "babel-eslint": "latest",
     "babel-jest": "latest",
-    "babel-preset-env": "latest",
     "codecov": "latest",
     "eslint": "latest",
     "eslint-config-standard": "latest",
