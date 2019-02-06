@@ -48,7 +48,9 @@
       "^.+\\.js$": "babel-jest"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "consola": "^2.4.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
