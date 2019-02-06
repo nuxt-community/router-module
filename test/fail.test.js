@@ -1,4 +1,4 @@
-import { Nuxt } from 'nuxt'
+import { Nuxt, Builder } from 'nuxt'
 import consola from 'consola'
 import config from './fixture/fail/nuxt.config'
 
@@ -10,14 +10,14 @@ describe('Module', () => {
   beforeAll(async () => {
     config.dev = false
     nuxt = new Nuxt(config)
+    await new Builder(nuxt).build()
   }, 60000)
 
   afterAll(async () => {
     await nuxt.close()
   })
 
-  test('should warn if not found the router file', async () => {
-    expect(consola.warn).toBeCalledTimes(1)
-    expect(consola.warn).toBeCalledWith(expect.stringMatching(/^No `(.*)` file found in `(.*)`.$/))
+  test('should warn if not found the router file', () => {
+    expect(consola.warn).toHaveBeenNthCalledWith(1, expect.stringMatching(/^No `(.*)` file found in `(.*)`.$/))
   })
 })
