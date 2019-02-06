@@ -2,7 +2,7 @@ import { Nuxt, Builder } from 'nuxt'
 import request from 'request-promise-native'
 import config from './fixture/ok/nuxt.config'
 
-const url = path => `http://localhost:3000${path}`
+const url = path => `http://localhost:4446${path}`
 const get = path => request(url(path))
 
 describe('Module', () => {
@@ -12,7 +12,7 @@ describe('Module', () => {
     config.dev = false
     nuxt = new Nuxt(config)
     await new Builder(nuxt).build()
-    await nuxt.listen(3000)
+    await nuxt.listen(4446)
   }, 60000)
 
   afterAll(async () => {
