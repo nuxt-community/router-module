@@ -1,11 +1,8 @@
-const { Nuxt, Builder } = require('nuxt')
-const request = require('request-promise-native')
+import { Nuxt, Builder } from 'nuxt'
+import request from 'request-promise-native'
+import config from './fixture/keepDefaultRouter/nuxt.config'
 
-jest.setTimeout(60000)
-
-const config = require('./fixture/keepDefaultRouter/nuxt.config')
-
-const url = path => `http://localhost:4445${path}`
+const url = path => `http://localhost:3000${path}`
 const get = path => request(url(path))
 
 describe('Module', () => {
@@ -15,8 +12,8 @@ describe('Module', () => {
     config.dev = false
     nuxt = new Nuxt(config)
     await new Builder(nuxt).build()
-    await nuxt.listen(4445)
-  })
+    await nuxt.listen(3000)
+  }, 60000)
 
   afterAll(async () => {
     await nuxt.close()

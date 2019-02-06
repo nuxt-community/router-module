@@ -1,11 +1,8 @@
-const { Nuxt } = require('nuxt')
-const consola = require('consola')
+import { Nuxt } from 'nuxt'
+import consola from 'consola'
+import config from './fixture/fail/nuxt.config'
 
 consola.mockTypes(() => jest.fn())
-
-jest.setTimeout(60000)
-
-const config = require('./fixture/fail/nuxt.config')
 
 describe('Module', () => {
   let nuxt
@@ -13,7 +10,7 @@ describe('Module', () => {
   beforeAll(async () => {
     config.dev = false
     nuxt = new Nuxt(config)
-  })
+  }, 60000)
 
   afterAll(async () => {
     await nuxt.close()
