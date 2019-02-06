@@ -67,7 +67,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.1.0",
     "jest": "^24.1.0",
-    "nuxt": "^2.4.2",
+    "nuxt": "^2.4.3",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5",
     "standard-version": "^4.4.0"
