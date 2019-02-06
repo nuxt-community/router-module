@@ -1,9 +1,9 @@
-import { resolve, join } from 'path'
+const { resolve, join } = require('path')
 
-export default {
+module.exports = {
   buildDir: resolve(__dirname, '.nuxt'),
   srcDir: __dirname,
-  modules: [{ handler: require('@@') }],
+  modules: [{ handler: require('../../../') }],
   routerModule: {
     path: join(__dirname, 'routes'),
     fileName: 'index.js'

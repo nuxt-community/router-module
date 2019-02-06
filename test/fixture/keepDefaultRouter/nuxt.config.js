@@ -1,9 +1,9 @@
-import { resolve } from 'path'
+const { resolve } = require('path')
 
-export default {
+module.exports = {
   buildDir: resolve(__dirname, '.nuxt'),
   srcDir: __dirname,
-  modules: [{ handler: require('@@') }],
+  modules: [{ handler: require('../../../') }],
   routerModule: {
     keepDefaultRouter: true
   }

@@ -1,6 +1,7 @@
-import { Nuxt, Builder } from 'nuxt'
-import consola from 'consola'
-import config from './fixture/fail/nuxt.config'
+const { Nuxt, Builder } = require('nuxt')
+const consola = require('consola')
+
+const config = require('./fixture/fail/nuxt.config')
 
 consola.mockTypes(() => jest.fn())
 

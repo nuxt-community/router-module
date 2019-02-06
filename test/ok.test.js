@@ -1,6 +1,7 @@
-import { Nuxt, Builder } from 'nuxt'
-import request from 'request-promise-native'
-import config from './fixture/ok/nuxt.config'
+const { Nuxt, Builder } = require('nuxt')
+const request = require('request-promise-native')
+
+const config = require('./fixture/ok/nuxt.config')
 
 const url = path => `http://localhost:4446${path}`
 const get = path => request(url(path))
