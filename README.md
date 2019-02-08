@@ -1,10 +1,11 @@
 # Nuxt Router Module
-[![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/router/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/router)
-[![npm](https://img.shields.io/npm/dt/@nuxtjs/router.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/router)
-[![CircleCI](https://img.shields.io/circleci/project/github/nuxt-community/router-module.svg?style=flat-square)](https://circleci.com/gh/nuxt-community/router-module)
-[![Codecov](https://img.shields.io/codecov/c/github/nuxt-community/router-module.svg?style=flat-square)](https://codecov.io/gh/nuxt-community/router-module)
-[![Dependencies](https://david-dm.org/nuxt-community/router-module/status.svg?style=flat-square)](https://david-dm.org/nuxt-community/router-module)
-[![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
+
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Circle CI][circle-ci-src]][circle-ci-href]
+[![Codecov][codecov-src]][codecov-href]
+[![Dependencies][david-dm-src]][david-dm-href]
+[![Standard JS][standard-js-src]][standard-js-href]
 
 > Nuxt module to use router.js instead of pages/ directory
 
@@ -104,6 +105,7 @@ function fixRoutes(defaultRoutes) {
 ```
 
 ### Customize Routes Directory or Filename
+
 If you use the module with fileName `{fileName: 'my-router.js'}` and/or `{path: 'custom-dir'}` you can customize the location of you route files.
 
 ## License
@@ -111,3 +113,17 @@ If you use the module with fileName `{fileName: 'my-router.js'}` and/or `{path: 
 [MIT License](./LICENSE)
 
 Copyright (c) Sebastien Chopin <seb@chopin.io>
+
+<!-- Badges -->
+[npm-version-src]: https://img.shields.io/npm/dt/@nuxtjs/router.svg?style=flat-square
+[npm-version-href]: https://npmjs.com/package/@nuxtjs/router
+[npm-downloads-src]: https://img.shields.io/npm/v/@nuxtjs/router/latest.svg?style=flat-square
+[npm-downloads-href]: https://npmjs.com/package/@nuxtjs/router
+[circle-ci-src]: https://img.shields.io/circleci/project/github/nuxt-community/router-module.svg?style=flat-square
+[circle-ci-href]: https://circleci.com/gh/nuxt-community/router-module
+[codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/router-module.svg?style=flat-square
+[codecov-href]: https://codecov.io/gh/nuxt-community/router-module
+[david-dm-src]: https://david-dm.org/nuxt-community/router-module/status.svg?style=flat-square
+[david-dm-href]: https://david-dm.org/nuxt-community/router-module
+[standard-js-src]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square
+[standard-js-href]: https://standardjs.com
