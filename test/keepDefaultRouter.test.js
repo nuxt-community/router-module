@@ -1,3 +1,5 @@
+jest.setTimeout(60000)
+
 const { Nuxt, Builder } = require('nuxt')
 const request = require('request-promise-native')
 
@@ -14,14 +16,14 @@ describe('Module', () => {
     nuxt = new Nuxt(config)
     await new Builder(nuxt).build()
     await nuxt.listen(4445)
-  }, 60000)
+  })
 
   afterAll(async () => {
     await nuxt.close()
   })
 
   test('render', async () => {
-    let html = await get('/some/foo')
+    const html = await get('/some/foo')
     expect(html).toContain('Hello page')
   })
 })

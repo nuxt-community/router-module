@@ -1,3 +1,5 @@
+jest.setTimeout(60000)
+
 const { Nuxt, Builder } = require('nuxt')
 const consola = require('consola')
 
@@ -12,7 +14,7 @@ describe('Module', () => {
     config.dev = false
     nuxt = new Nuxt(config)
     await new Builder(nuxt).build()
-  }, 60000)
+  })
 
   afterAll(async () => {
     await nuxt.close()

@@ -5,7 +5,7 @@ import MyPage from '~/components/my-page'
 
 Vue.use(Router)
 
-export function createRouter () {
+export function createRouter() {
   return new Router({
     mode: 'history',
     routes: [
