@@ -112,7 +112,7 @@ If you use the module with fileName `{fileName: 'my-router.js'}` and/or `{path: 
 
 [MIT License](./LICENSE)
 
-Copyright (c) Sebastien Chopin <seb@chopin.io>
+Copyright (c) Nuxt Community
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/dt/@nuxtjs/router.svg?style=flat-square
