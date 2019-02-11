@@ -19,6 +19,7 @@ Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtj
 
 1. Install `@nuxtjs/router` dependency with `yarn` or `npm` into your project
 2. Add `@nuxtjs/router` to `modules` section of `nuxt.config.js`:
+3. Configure it:
 
 ```js
 {
@@ -38,7 +39,7 @@ or
 }
 ```
 
-3. If you are using SPA mode, add an index `/` route to `generate` section of `nuxt.config.js`:
+If you are using SPA mode, add an index `/` route to `generate` section of `nuxt.config.js`:
 
 ```js
 {
