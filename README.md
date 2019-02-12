@@ -51,6 +51,23 @@ If you are using SPA mode, add an index `/` route to `generate` section of `nuxt
 }
 ```
 
+## Options
+
+### `path`
+- Default: `srcDir`
+
+Location of you route file.
+
+### `fileName`
+- Default: `router.js`
+
+Name of you route file.
+
+### `keepDefaultRouter`
+- Default: `false`
+
+Can access the default router.
+
 ## Usage
 
 This module disable the `pages/` directory into Nuxt and will use a `router.js` file at your `srcDir` directory:
@@ -104,20 +121,6 @@ function fixRoutes(defaultRoutes) {
   return defaultRoutes.filter(...).map(...)
 }
 ```
-
-## Options
-
-### `path`
-- Default: `srcDir`
-Location of you route file.
-
-### `fileName`
-- Default: `router.js`
-Name of you route file.
-
-### `keepDefaultRouter`
-- Default: `false`
-Can access the default router.
 
 ## License
 
