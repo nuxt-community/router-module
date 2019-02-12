@@ -1,7 +1,7 @@
 {
   "name": "@nuxtjs/router",
   "version": "1.2.1",
-  "description": "Nuxt module to use router.js instead of pages/ directory",
+  "description": "Nuxt module to use router.js instead of pages/ directory.",
   "license": "MIT",
   "contributors": [
     "Sebastien Chopin <seb@chopin.io>",
