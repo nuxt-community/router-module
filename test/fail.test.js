@@ -5,11 +5,11 @@ const consola = require('consola')
 
 const config = require('./fixture/fail/nuxt.config')
 
+let nuxt
+
 consola.mockTypes(() => jest.fn())
 
 describe('Module', () => {
-  let nuxt
-
   beforeAll(async () => {
     config.dev = false
     nuxt = new Nuxt(config)
