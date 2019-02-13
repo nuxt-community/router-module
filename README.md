@@ -54,16 +54,19 @@ If you are using SPA mode, add an index `/` route to `generate` section of `nuxt
 ## Options
 
 ### `path`
+
 - Default: `srcDir`
 
 Location of you route file.
 
 ### `fileName`
+
 - Default: `router.js`
 
 Name of you route file.
 
 ### `keepDefaultRouter`
+
 - Default: `false`
 
 Can access the default router.
@@ -106,9 +109,7 @@ export function createRouter() {
 If you use the module with `{ keepDefaultRouter: true }`, you can access the default router:
 
 ```js
-import { createRouter as createDefaultRouter } from './defaultRouter'
-
-export function createRouter(ssrContext) {
+export function createRouter(ssrContext, createDefaultRouter) {
   const defaultRouter = createDefaultRouter(ssrContext)
   return new Router({
     ...defaultRouter.options,
