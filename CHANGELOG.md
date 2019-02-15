@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.2"></a>
+## [1.3.2](https://github.com/nuxt-community/router-module/compare/v1.3.1...v1.3.2) (2019-02-15)
+
+
+### Bug Fixes
+
+* **paths:** support for windows ([0314e9c](https://github.com/nuxt-community/router-module/commit/0314e9c))
+
+
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://github.com/nuxt-community/router-module/compare/v1.3.0...v1.3.1) (2019-02-15)
 
