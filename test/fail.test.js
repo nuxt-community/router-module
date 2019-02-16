@@ -9,7 +9,7 @@ let nuxt
 
 consola.mockTypes(() => jest.fn())
 
-describe('Module', () => {
+describe('module', () => {
   beforeAll(async () => {
     config.dev = false
     nuxt = new Nuxt(config)
