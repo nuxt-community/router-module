@@ -7,7 +7,7 @@
 [![Dependencies][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
-> Nuxt module to use router.js instead of pages/ directory.
+> Nuxt module to use router.js instead of pages/ directory
 
 [📖 **Release Notes**](https://github.com/nuxt-community/router-module/releases)
 
