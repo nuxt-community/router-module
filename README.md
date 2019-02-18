@@ -17,8 +17,8 @@ Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtj
 
 ## Setup
 
-1. Add `@nuxtjs/router` dependency with `yarn` or `npm` into your project
-2. Add `@nuxtjs/router` to `modules` section of `nuxt.config.js`:
+1. Add the `@nuxtjs/router` dependency with `yarn` or `npm` into your project
+2. Add `@nuxtjs/router` to the `modules` section of `nuxt.config.js`:
 3. Configure it:
 
 ```js
