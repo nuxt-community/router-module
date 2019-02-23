@@ -2374,7 +2374,7 @@ connect@^3.6.6:
     parseurl "~1.3.2"
     utils-merge "1.0.1"
 
-consola@^2.0.0-1, consola@^2.3.0, consola@^2.3.2, consola@^2.4.1:
+consola@^2.0.0-1, consola@^2.3.0, consola@^2.3.2:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.4.1.tgz#ad7209c306a2b6fa955b776f88f87bf92f491aa8"
   integrity sha512-j6bIzpmyRGY2TDZVkAi3DM95CgC8hWx1A7AiJdyn4X5gls1bbpXIMpn3p8QsfaNu+ycNLXP+2DwKb47FXjw1ww==
@@ -2384,6 +2384,11 @@ consola@^2.0.0-1, consola@^2.3.0, consola@^2.3.2, consola@^2.4.1:
     figures "^2.0.0"
     std-env "^2.2.1"
     string-width "^3.0.0"
+
+consola@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.5.3.tgz#f31386d0e7a460a5b7a698a640c5679268db0961"
+  integrity sha512-kLQDZW5TfTds9F/QGt7X0YlEyVDYXdrjkcqPVD+GuZZSJbW1KgEP3b59A1d9S7Tv3Q8kQyu/r6wOeAODjKVvVQ==
 
 console-browserify@^1.1.0:
   version "1.1.0"
