@@ -15,7 +15,7 @@ describe('module', () => {
     nuxt = new Nuxt(config)
     await new Builder(nuxt).build()
   })
-  
+
   beforeEach(() => {
     logger.warn.mockClear()
   })
