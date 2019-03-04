@@ -17,7 +17,7 @@ describe('module', () => {
   })
 
   beforeEach(() => {
-    logger.warn.mockClear()
+    logger.clear()
   })
 
   afterAll(async () => {
