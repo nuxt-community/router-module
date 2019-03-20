@@ -13,6 +13,7 @@ logger.mockTypes(() => jest.fn())
 describe('module', () => {
   beforeAll(async () => {
     nuxt = new Nuxt(config)
+    await nuxt.ready()
     await new Builder(nuxt).build()
   })
 
