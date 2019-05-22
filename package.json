@@ -21,7 +21,7 @@
     "lib"
   ],
   "dependencies": {
-    "consola": "^2.6.1"
+    "consola": "^2.6.2"
   },
   "devDependencies": {
     "@babel/core": "latest",
