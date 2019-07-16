@@ -1,7 +1,7 @@
 jest.setTimeout(60000)
 
 const { Nuxt, Builder } = require('nuxt')
-const logger = require('@/logger')
+const logger = require('../lib/logger')
 
 const config = require('./fixture/fail/nuxt.config')
 config.dev = false

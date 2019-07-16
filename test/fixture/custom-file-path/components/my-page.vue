@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  asyncData({ isClient }) {
+  asyncData ({ isClient }) {
     return {
       name: (isClient ? 'client' : 'server')
     }

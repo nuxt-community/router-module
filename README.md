@@ -4,8 +4,7 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Circle CI][circle-ci-src]][circle-ci-href]
 [![Codecov][codecov-src]][codecov-href]
-[![Dependencies][david-dm-src]][david-dm-href]
-[![Standard JS][standard-js-src]][standard-js-href]
+[![License][license-src]][license-href]
 
 > Nuxt module to use router.js instead of pages/ directory
 
@@ -17,25 +16,36 @@ Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtj
 
 ## Setup
 
-1. Add the `@nuxtjs/router` dependency with `yarn` or `npm` to your project
+1. Add `@nuxtjs/router` dependency to your project
+
+```bash
+yarn add @nuxtjs/router # or npm install @nuxtjs/router
+```
+
 2. Add `@nuxtjs/router` to the `modules` section of `nuxt.config.js`
-3. Configure it:
+
+```js
+{
+  modules: [
+    // Simple usage
+    '@nuxtjs/router',
+
+    // With options
+    ['@nuxtjs/router', { /* module options */ }]
+  ]
+}
+```
+
+### Using top level options
 
 ```js
 {
   modules: [
     '@nuxtjs/router'
-  ]
-}
-```
-
-or
-
-```js
-{
-  modules: [
-    ['@nuxtjs/router', { keepDefaultRouter: true }]
-  ]
+  ],
+  routerModule: {
+    /* module options */
+  }
 }
 ```
 
@@ -130,10 +140,10 @@ function fixRoutes(defaultRoutes) {
 Copyright (c) Nuxt Community
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/dt/@nuxtjs/router.svg?style=flat-square
+[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/router/latest.svg?style=flat-square
 [npm-version-href]: https://npmjs.com/package/@nuxtjs/router
 
-[npm-downloads-src]: https://img.shields.io/npm/v/@nuxtjs/router/latest.svg?style=flat-square
+[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/router.svg?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/@nuxtjs/router
 
 [circle-ci-src]: https://img.shields.io/circleci/project/github/nuxt-community/router-module.svg?style=flat-square
@@ -142,8 +152,5 @@ Copyright (c) Nuxt Community
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/router-module.svg?style=flat-square
 [codecov-href]: https://codecov.io/gh/nuxt-community/router-module
 
-[david-dm-src]: https://david-dm.org/nuxt-community/router-module/status.svg?style=flat-square
-[david-dm-href]: https://david-dm.org/nuxt-community/router-module
-
-[standard-js-src]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square
-[standard-js-href]: https://standardjs.com
+[license-src]: https://img.shields.io/npm/l/@nuxtjs/router.svg?style=flat-square
+[license-href]: https://npmjs.com/package/@nuxtjs/router
