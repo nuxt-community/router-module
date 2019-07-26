@@ -1,6 +1,30 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.4.0](https://github.com/nuxt-community/router-module/compare/v1.3.2...v1.4.0) (2019-07-26)
+
+
+### Build System
+
+* **deps:** bump handlebars from 4.1.0 to 4.1.2 ([63e5cb7](https://github.com/nuxt-community/router-module/commit/63e5cb7))
+* **deps:** bump js-yaml from 3.12.1 to 3.13.1 ([b68dad9](https://github.com/nuxt-community/router-module/commit/b68dad9))
+* **deps:** bump lodash.template from 4.4.0 to 4.5.0 ([#52](https://github.com/nuxt-community/router-module/issues/52)) ([5dd8c08](https://github.com/nuxt-community/router-module/commit/5dd8c08))
+* **deps:** bump webpack-bundle-analyzer from 3.0.4 to 3.3.2 ([eac68fd](https://github.com/nuxt-community/router-module/commit/eac68fd))
+
+
+### Features
+
+* support `router-module` in `nuxt.config` ([3e9ecdd](https://github.com/nuxt-community/router-module/commit/3e9ecdd))
+* **logger:** separate consola into logger file ([2ff54ff](https://github.com/nuxt-community/router-module/commit/2ff54ff))
+
+
+### Tests
+
+* **fixture:** update configs ([55c4c4f](https://github.com/nuxt-community/router-module/commit/55c4c4f))
+* **module:** update describe ([ca8d937](https://github.com/nuxt-community/router-module/commit/ca8d937))
+
+
 
 <a name="1.3.2"></a>
 ## [1.3.2](https://github.com/nuxt-community/router-module/compare/v1.3.1...v1.3.2) (2019-02-15)
