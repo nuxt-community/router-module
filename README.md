@@ -8,7 +8,7 @@
 
 > Nuxt module to use router.js instead of pages/ directory
 
-[📖 **Release Notes**](https://github.com/nuxt-community/router-module/releases)
+[📖 **Release Notes**](./CHANGELOG.md)
 
 ## Features
 
