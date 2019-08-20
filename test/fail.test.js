@@ -1,21 +1,14 @@
-jest.setTimeout(60000)
-
-const { Nuxt, Builder } = require('nuxt')
+const { build, loadConfig } = require('@nuxtjs/module-test-utils')
 const logger = require('../lib/logger')
-
-const config = require('./fixture/fail/nuxt.config')
-config.dev = false
-
-let nuxt
 
 logger.mockTypes(() => jest.fn())
 
-describe('module', () => {
+describe('fail', () => {
+  let nuxt
+
   beforeAll(async () => {
-    nuxt = new Nuxt(config)
-    await nuxt.ready()
-    await new Builder(nuxt).build()
-  })
+    ({ nuxt } = (await build(loadConfig(__dirname, 'fail'))))
+  }, 60000)
 
   beforeEach(() => {
     logger.clear()

@@ -1,10 +1,10 @@
 const { setup, loadConfig, get } = require('@nuxtjs/module-test-utils')
 
-describe('custom-file-path', () => {
+describe('keep-default-router', () => {
   let nuxt
 
   beforeAll(async () => {
-    ({ nuxt } = (await setup(loadConfig(__dirname, 'custom-file-path'))))
+    ({ nuxt } = (await setup(loadConfig(__dirname, 'keep-default-router'))))
   }, 60000)
 
   afterAll(async () => {
@@ -12,7 +12,7 @@ describe('custom-file-path', () => {
   })
 
   test('render', async () => {
-    const html = await get('/')
-    expect(html).toContain('Hello server')
+    const html = await get('/some/foo')
+    expect(html).toContain('Hello page')
   })
 })
