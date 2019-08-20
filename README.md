@@ -22,11 +22,13 @@ Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtj
 yarn add @nuxtjs/router # or npm install @nuxtjs/router
 ```
 
-2. Add `@nuxtjs/router` to the `modules` section of `nuxt.config.js`
+2. Add `@nuxtjs/router` to the `buildModules` section of `nuxt.config.js`
+
+:warning: If you are using Nuxt `< 2.9.0`, use `modules` instead.
 
 ```js
 {
-  modules: [
+  buildModules: [
     // Simple usage
     '@nuxtjs/router',
 
@@ -40,7 +42,7 @@ yarn add @nuxtjs/router # or npm install @nuxtjs/router
 
 ```js
 {
-  modules: [
+  buildModules: [
     '@nuxtjs/router'
   ],
   routerModule: {
