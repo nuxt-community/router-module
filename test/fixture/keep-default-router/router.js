@@ -1,10 +1,10 @@
 import Router from 'vue-router'
 
-export function createRouter (ssrContext, createDefaultRouter) {
-  const defaultRouter = createDefaultRouter(ssrContext)
+export function createRouter (ssrContext, createDefaultRouter, routerOptions) {
+  const options = routerOptions || createDefaultRouter(ssrContext).options
 
   return new Router({
-    ...defaultRouter.options,
+    ...options,
     routes: ((defaultRoutes) => {
       return defaultRoutes.map((route) => {
         return {
@@ -12,6 +12,6 @@ export function createRouter (ssrContext, createDefaultRouter) {
           path: '/some' + route.path
         }
       })
-    })(defaultRouter.options.routes)
+    })(options.routes)
   })
 }

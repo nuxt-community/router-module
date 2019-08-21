@@ -121,11 +121,12 @@ export function createRouter() {
 If you use the module with `{ keepDefaultRouter: true }`, you can access the default router:
 
 ```js
-export function createRouter(ssrContext, createDefaultRouter) {
-  const defaultRouter = createDefaultRouter(ssrContext)
+export function createRouter(ssrContext, createDefaultRouter, routerOptions) {
+  const options = routerOptions ? routerOptions : createDefaultRouter(ssrContext).options
+
   return new Router({
-    ...defaultRouter.options,
-    routes: fixRoutes(defaultRouter.options.routes)
+    ...options,
+    routes: fixRoutes(options.routes)
   })
 }
 
