@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/nuxt-community/router-module/compare/v1.4.0...v1.5.0) (2019-08-21)
+
+
+### Features
+
+* add routerOptions ([9512d6d](https://github.com/nuxt-community/router-module/commit/9512d6d))
+* try to load from edge ([4c66590](https://github.com/nuxt-community/router-module/commit/4c66590))
+
 ## [1.4.0](https://github.com/nuxt-community/router-module/compare/v1.3.2...v1.4.0) (2019-07-26)
 
 
