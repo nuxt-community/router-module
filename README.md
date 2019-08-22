@@ -120,6 +120,8 @@ export function createRouter() {
 
 If you use the module with `{ keepDefaultRouter: true }`, you can access the default router:
 
+:warning: If you are using Nuxt `< 2.9.0`, the parameter `routerOptions` no available.
+
 ```js
 export function createRouter(ssrContext, createDefaultRouter, routerOptions) {
   const options = routerOptions ? routerOptions : createDefaultRouter(ssrContext).options
