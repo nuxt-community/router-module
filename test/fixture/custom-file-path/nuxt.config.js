@@ -1,9 +1,7 @@
-const { resolve, join } = require('path')
+const { join } = require('path')
 
 module.exports = {
-  rootDir: resolve(__dirname, '../../..'),
-  buildDir: resolve(__dirname, '.nuxt'),
-  srcDir: __dirname,
+  rootDir: __dirname,
   render: {
     resourceHints: false
   },

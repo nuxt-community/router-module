@@ -2,24 +2,21 @@
   "name": "@nuxtjs/router",
   "version": "1.5.0",
   "description": "Nuxt module to use router.js instead of pages/ directory",
+  "repository": "nuxt-community/router-module",
   "license": "MIT",
   "contributors": [
     "Sebastien Chopin <seb@chopin.io>",
     "Ricardo Gobbo de Souza <ricardogobbosouza@yahoo.com.br>"
   ],
-  "main": "lib/module.js",
-  "repository": "nuxt-community/router-module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "lint": "eslint --ext .js,.vue lib test",
-    "test": "yarn lint && jest",
-    "release": "yarn test && standard-version && git push --follow-tags && npm publish"
-  },
   "files": [
     "lib"
   ],
+  "main": "lib/module.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue .",
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
+    "test": "yarn lint && jest"
+  },
   "dependencies": {
     "consola": "^2.10.1"
   },
@@ -34,5 +31,8 @@
     "jest": "latest",
     "nuxt-edge": "latest",
     "standard-version": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
