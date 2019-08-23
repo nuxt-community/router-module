@@ -19,7 +19,7 @@ Use your own `router.js` to handle your routes into your [Nuxt.js](https://nuxtj
 1. Add `@nuxtjs/router` dependency to your project
 
 ```bash
-yarn add @nuxtjs/router # or npm install @nuxtjs/router
+yarn add --dev @nuxtjs/router # or npm install --save-dev @nuxtjs/router
 ```
 
 2. Add `@nuxtjs/router` to the `buildModules` section of `nuxt.config.js`
