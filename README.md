@@ -24,10 +24,10 @@ yarn add --dev @nuxtjs/router # or npm install --save-dev @nuxtjs/router
 
 2. Add `@nuxtjs/router` to the `buildModules` section of `nuxt.config.js`
 
-:warning: If you are using Nuxt `< 2.9.0`, use `modules` instead.
+:warning: If you are using Nuxt older than **v2.9** you have to install module as a `dependency` (No `--dev` or `--save-dev` flags) and also use `modules` section in `nuxt.config.js` instead of `buildModules`.
 
 ```js
-{
+export default {
   buildModules: [
     // Simple usage
     '@nuxtjs/router',
@@ -41,7 +41,7 @@ yarn add --dev @nuxtjs/router # or npm install --save-dev @nuxtjs/router
 ### Using top level options
 
 ```js
-{
+export default {
   buildModules: [
     '@nuxtjs/router'
   ],
@@ -54,7 +54,7 @@ yarn add --dev @nuxtjs/router # or npm install --save-dev @nuxtjs/router
 If you are using SPA mode, add an index `/` route to `generate` section of `nuxt.config.js`:
 
 ```js
-{
+export default {
   generate: {
     routes: [
       '/'
@@ -67,18 +67,21 @@ If you are using SPA mode, add an index `/` route to `generate` section of `nuxt
 
 ### `path`
 
+- Type: `String`
 - Default: `srcDir`
 
 Location of you route file.
 
 ### `fileName`
 
+- Type: `String`
 - Default: `router.js`
 
 Name of you route file.
 
 ### `keepDefaultRouter`
 
+- Type: `Boolean`
 - Default: `false`
 
 Can access the default router.
