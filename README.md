@@ -118,6 +118,7 @@ export function createRouter() {
   })
 }
 ```
+
 The components defined as routes have access to the same special attributes and functions (head, asyncData, validate, etc.) as the [Nuxt Page component](https://nuxtjs.org/guide/views/#pages).
 
 ### Accessing default router
