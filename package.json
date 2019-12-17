@@ -18,7 +18,7 @@
     "test": "yarn lint && jest"
   },
   "dependencies": {
-    "consola": "^2.11.0"
+    "consola": "^2.11.1"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
