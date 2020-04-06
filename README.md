@@ -2,7 +2,7 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Circle CI][circle-ci-src]][circle-ci-href]
+[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
@@ -156,8 +156,8 @@ Copyright (c) Nuxt Community
 [npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/router.svg?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/@nuxtjs/router
 
-[circle-ci-src]: https://img.shields.io/circleci/project/github/nuxt-community/router-module.svg?style=flat-square
-[circle-ci-href]: https://circleci.com/gh/nuxt-community/router-module
+[github-actions-ci-src]: https://github.com/nuxt-community/router-module/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/nuxt-community/router-module/actions?query=workflow%3Aci
 
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/router-module.svg?style=flat-square
 [codecov-href]: https://codecov.io/gh/nuxt-community/router-module
