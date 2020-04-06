@@ -150,17 +150,17 @@ function fixRoutes(defaultRoutes) {
 Copyright (c) Nuxt Community
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/router/latest.svg?style=flat-square
+[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/router/latest.svg
 [npm-version-href]: https://npmjs.com/package/@nuxtjs/router
 
-[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/router.svg?style=flat-square
+[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/router.svg
 [npm-downloads-href]: https://npmjs.com/package/@nuxtjs/router
 
 [github-actions-ci-src]: https://github.com/nuxt-community/router-module/workflows/ci/badge.svg
 [github-actions-ci-href]: https://github.com/nuxt-community/router-module/actions?query=workflow%3Aci
 
-[codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/router-module.svg?style=flat-square
+[codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/router-module.svg
 [codecov-href]: https://codecov.io/gh/nuxt-community/router-module
 
-[license-src]: https://img.shields.io/npm/l/@nuxtjs/router.svg?style=flat-square
+[license-src]: https://img.shields.io/npm/l/@nuxtjs/router.svg
 [license-href]: https://npmjs.com/package/@nuxtjs/router
