@@ -125,7 +125,7 @@ The components defined as routes have access to the same special attributes and 
 
 If you use the module with `{ keepDefaultRouter: true }`, you can access the default router:
 
-:warning: If you are using Nuxt `< 2.9.0`, the parameter `routerOptions` no available.
+:warning: If you are using Nuxt `< 2.9.0`, the parameter `routerOptions` is not available.
 
 ```js
 export function createRouter(ssrContext, createDefaultRouter, routerOptions) {
