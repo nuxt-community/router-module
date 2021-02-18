@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/nuxt-community/router-module/compare/v1.5.0...v1.5.1) (2021-02-18)
+
+
+### Bug Fixes
+
+* keepDefaultRouter option broken in nuxt 2.15 ([#92](https://github.com/nuxt-community/router-module/issues/92)) ([fb16c31](https://github.com/nuxt-community/router-module/commit/fb16c31b45bdaa49773e062e408e5fed356e5b3b))
+
 ## [1.5.0](https://github.com/nuxt-community/router-module/compare/v1.4.0...v1.5.0) (2019-08-21)
 
 
