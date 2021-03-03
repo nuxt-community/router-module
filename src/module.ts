@@ -63,6 +63,7 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
     defaultRouter = require.resolve('@nuxt/vue-app/template/router')
   } catch (err) {
     try {
+      /* istanbul ignore next */
       defaultRouter = require.resolve('@nuxt/vue-app-edge/template/router')
     } catch (err) {
       /* istanbul ignore next */
