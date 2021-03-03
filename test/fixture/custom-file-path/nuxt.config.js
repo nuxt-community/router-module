@@ -1,9 +1,9 @@
 const { join } = require('path')
 
-module.exports = {
+export default {
   rootDir: __dirname,
   buildModules: [
-    { handler: require('../../../') }
+    '../../../src/module.ts'
   ],
   routerModule: {
     path: join(__dirname, 'routes'),
