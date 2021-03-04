@@ -1,16 +1,33 @@
-const { relative, resolve } = require('path')
-const { existsSync } = require('fs')
-const logger = require('./logger')
+import { relative, resolve } from 'path'
+import { existsSync } from 'fs'
+import type { Module } from '@nuxt/types'
+import consola from 'consola'
+import defu from 'defu'
+import { name, version } from '../package.json'
 
-module.exports = function (moduleOptions) {
-  const options = {
+const logger = consola.withTag('nuxt:router')
+
+export interface ModuleOptions {
+  path: string;
+  fileName: string;
+  keepDefaultRouter?: boolean;
+}
+
+const CONFIG_KEY = 'routerModule'
+
+const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
+  const DEFAULTS: ModuleOptions = {
     path: this.options.srcDir,
     fileName: 'router.js',
-    keepDefaultRouter: false,
-    ...this.options['router-module'],
-    ...this.options.routerModule,
-    ...moduleOptions
+    keepDefaultRouter: false
   }
+
+  const options: ModuleOptions = defu(
+    this.options['router-module'],
+    this.options[CONFIG_KEY],
+    moduleOptions,
+    DEFAULTS
+  )
 
   const routerFilePath = resolve(options.path, options.fileName)
 
@@ -22,7 +39,7 @@ module.exports = function (moduleOptions) {
 
   // Add plugin to import router file path as the main template for routing
   this.addPlugin({
-    src: resolve(__dirname, 'plugin.js'),
+    src: resolve(__dirname, '../templates/plugin.js'),
     fileName: 'router.js',
     options: {
       routerFilePath: relative(this.options.buildDir, routerFilePath).replace(/\/+|\\+/g, '/'),
@@ -40,11 +57,12 @@ module.exports = function (moduleOptions) {
   }
 
   // Put default router as .nuxt/defaultRouter.js
-  let defaultRouter
+  let defaultRouter: string
 
   try {
     defaultRouter = require.resolve('@nuxt/vue-app/template/router')
   } catch (err) {
+    /* istanbul ignore next */
     try {
       defaultRouter = require.resolve('@nuxt/vue-app-edge/template/router')
     } catch (err) {
@@ -59,4 +77,11 @@ module.exports = function (moduleOptions) {
   })
 }
 
-module.exports.meta = require('../package.json')
+;(nuxtModule as any).meta = { name, version }
+
+declare module '@nuxt/types' {
+  interface NuxtConfig { [CONFIG_KEY]?: ModuleOptions } // Nuxt 2.14+
+  interface Configuration { [CONFIG_KEY]?: ModuleOptions } // Nuxt 2.9 - 2.13
+}
+
+export default nuxtModule
