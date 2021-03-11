@@ -11,6 +11,7 @@ export interface ModuleOptions {
   path: string;
   fileName: string;
   keepDefaultRouter?: boolean;
+  parsePages?: boolean;
 }
 
 const CONFIG_KEY = 'routerModule'
@@ -28,6 +29,10 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
     moduleOptions,
     DEFAULTS
   )
+
+  if (typeof options.parsePages === 'undefined') {
+    options.parsePages = options.keepDefaultRouter
+  }
 
   const routerFilePath = resolve(options.path, options.fileName)
 
@@ -48,33 +53,35 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
   })
 
   // Disable parsing `pages/`
-  if (!options.keepDefaultRouter) {
-    return this.nuxt.hook('build:before', () => {
+  if (!options.parsePages) {
+    this.nuxt.hook('build:before', () => {
       this.nuxt.options.build.createRoutes = () => {
         return []
       }
     })
   }
 
-  // Put default router as .nuxt/defaultRouter.js
-  let defaultRouter: string
+  if (options.keepDefaultRouter) {
+    // Put default router as .nuxt/defaultRouter.js
+    let defaultRouter: string
 
-  try {
-    defaultRouter = require.resolve('@nuxt/vue-app/template/router')
-  } catch (err) {
-    /* istanbul ignore next */
     try {
-      defaultRouter = require.resolve('@nuxt/vue-app-edge/template/router')
+      defaultRouter = require.resolve('@nuxt/vue-app/template/router')
     } catch (err) {
       /* istanbul ignore next */
-      defaultRouter = require.resolve('nuxt/lib/app/router')
+      try {
+        defaultRouter = require.resolve('@nuxt/vue-app-edge/template/router')
+      } catch (err) {
+        /* istanbul ignore next */
+        defaultRouter = require.resolve('nuxt/lib/app/router')
+      }
     }
-  }
 
-  this.addTemplate({
-    fileName: 'defaultRouter.js',
-    src: defaultRouter
-  })
+    this.addTemplate({
+      fileName: 'defaultRouter.js',
+      src: defaultRouter
+    })
+  }
 }
 
 ;(nuxtModule as any).meta = { name, version }
