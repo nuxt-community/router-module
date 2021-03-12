@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/router",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Nuxt.js module to use router.js instead of pages/ directory",
   "repository": "nuxt-community/router-module",
   "license": "MIT",

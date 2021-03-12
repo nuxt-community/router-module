@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/nuxt-community/router-module/compare/v1.5.1...v1.6.0) (2021-03-12)
+
+
+### Features
+
+* option parse pages ([#95](https://github.com/nuxt-community/router-module/issues/95)) ([4ebf7e6](https://github.com/nuxt-community/router-module/commit/4ebf7e6c4645bb58fcc471dc45bb8066720e4fb1))
+* typescript rewrite ([#94](https://github.com/nuxt-community/router-module/issues/94)) ([0c6a034](https://github.com/nuxt-community/router-module/commit/0c6a034c3508a056bb94ffafee0352c3985a8be2))
+
 ### [1.5.1](https://github.com/nuxt-community/router-module/compare/v1.5.0...v1.5.1) (2021-02-18)
 
 
