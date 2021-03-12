@@ -86,9 +86,16 @@ Name of you route file.
 
 Can access the default router.
 
+### `parsePages`
+
+- Type: `Boolean`
+- Default: `'keepDefaultRouter'`
+
+Can disable/enable the `pages/` directory into Nuxt.
+
 ## Usage
 
-This module disable the `pages/` directory into Nuxt and will use a `router.js` file at your `srcDir` directory:
+This module, by default, disable the `pages/` directory into Nuxt and will use a `router.js` file at your `srcDir` directory:
 
 ```bash
 components/
