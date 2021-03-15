@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/nuxt-community/router-module/compare/v1.6.0...v1.6.1) (2021-03-15)
+
+
+### Bug Fixes
+
+* template missing ([#99](https://github.com/nuxt-community/router-module/issues/99)) ([a5b8aad](https://github.com/nuxt-community/router-module/commit/a5b8aadc7a87dfd567e5bb879315aae214c35298))
+
 ## [1.6.0](https://github.com/nuxt-community/router-module/compare/v1.5.1...v1.6.0) (2021-03-12)
 
 
