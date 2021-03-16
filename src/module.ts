@@ -12,6 +12,8 @@ export interface ModuleOptions {
   fileName: string;
   keepDefaultRouter?: boolean;
   parsePages?: boolean;
+  rootDomain?: string;
+  subDomains?: string[];
 }
 
 const CONFIG_KEY = 'routerModule'
@@ -20,7 +22,9 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
   const DEFAULTS: ModuleOptions = {
     path: this.options.srcDir,
     fileName: 'router.js',
-    keepDefaultRouter: false
+    keepDefaultRouter: false,
+    rootDomain: null,
+    subDomains: []
   }
 
   const options: ModuleOptions = defu(
@@ -37,9 +41,10 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
   const routerFilePath = resolve(options.path, options.fileName)
 
   // Check if router file path is defined
-  if (!existsSync(routerFilePath)) {
+  if (!existsSync(routerFilePath) && !options.keepDefaultRouter) {
     logger.warn(`No \`${options.fileName}\` file found in \`${options.path}\`.`)
-    return
+
+    options.keepDefaultRouter = true
   }
 
   // Add plugin to import router file path as the main template for routing
@@ -47,8 +52,12 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
     src: resolve(__dirname, '../templates/plugin.js'),
     fileName: 'router.js',
     options: {
-      routerFilePath: relative(this.options.buildDir, routerFilePath).replace(/\/+|\\+/g, '/'),
-      keepDefaultRouter: options.keepDefaultRouter
+      routerFilePath: existsSync(routerFilePath)
+        ? relative(this.options.buildDir, routerFilePath).replace(/\/+|\\+/g, '/')
+        : null,
+      keepDefaultRouter: options.keepDefaultRouter,
+      rootDomain: options.rootDomain,
+      subDomains: options.subDomains
     }
   })
 
