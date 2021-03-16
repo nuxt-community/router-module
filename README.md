@@ -93,6 +93,20 @@ Can access the default router.
 
 Can disable/enable the `pages/` directory into Nuxt.
 
+### `rootDomain`
+
+- Type: `String`
+- Default: `'null'`
+
+Directory name for the pages of root-domain.
+
+### `subDomains`
+
+- Type: `String[]`
+- Default: `[]`
+
+List of directories to hold te pages for your subdomains.
+
 ## Usage
 
 This module, by default, disable the `pages/` directory into Nuxt and will use a `router.js` file at your `srcDir` directory:
@@ -136,13 +150,21 @@ If you use the module with `{ keepDefaultRouter: true }`, you can access the def
 
 :warning: If you are using Nuxt `< 2.15.0`, the parameter `config` is not available.
 
+:warning: If you are using Nuxt Router `< 1.7.0`, the parameter `getRoutesDomainOrSubdomain` is not available.
+
 ```js
-export function createRouter(ssrContext, createDefaultRouter, routerOptions, config) {
-  const options = routerOptions ? routerOptions : createDefaultRouter(ssrContext, config).options
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router)
+
+export function createRouter(ssrContext, createDefaultRouter, routerOptions, config, getRoutesDomainOrSubdomain) {
+  const options = routerOptions || createDefaultRouter(ssrContext, config).options
+  const routes = getRoutesDomainOrSubdomain ? getRoutesDomainOrSubdomain(ssrContext, options.routes) : options.routes 
 
   return new Router({
     ...options,
-    routes: fixRoutes(options.routes)
+    routes: fixRoutes(routes)
   })
 }
 
