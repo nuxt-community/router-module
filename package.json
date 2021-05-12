@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "consola": "^2.15.3",
-    "defu": "^3.2.2"
+    "defu": "^5.0.0"
   },
   "devDependencies": {
     "@babel/preset-typescript": "latest",
