@@ -136,18 +136,21 @@ If you use the module with `{ keepDefaultRouter: true }`, you can access the def
 
 :warning: If you are using Nuxt `< 2.15.0`, the parameter `config` is not available.
 
+:warning: If you are using Nuxt `< 2.16.0`, the parameter `store` is not available.
+
 ```js
-export function createRouter(ssrContext, createDefaultRouter, routerOptions, config) {
+export function createRouter(ssrContext, createDefaultRouter, routerOptions, config, store) {
   const options = routerOptions ? routerOptions : createDefaultRouter(ssrContext, config).options
 
   return new Router({
     ...options,
-    routes: fixRoutes(options.routes)
+    routes: fixRoutes(options.routes, store)
   })
 }
 
-function fixRoutes(defaultRoutes) {
+function fixRoutes(defaultRoutes, store) {
   // default routes that come from `pages/`
+  // Filter some routes using the content of the store for example
   return defaultRoutes.filter(...).map(...)
 }
 ```

@@ -7,6 +7,6 @@ const createDefaultRouter = null
 const routerOptions = null
 <% } %>
 
-export function createRouter(ssrContext, config) {
-  return customCreateRouter(ssrContext, createDefaultRouter, routerOptions, config)
+export function createRouter(ssrContext, config, store) {
+  return customCreateRouter(ssrContext, createDefaultRouter, routerOptions, config, store)
 }
