@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/nuxt-community/router-module/compare/v1.6.1...v1.7.0) (2021-12-17)
+
+
+### Features
+
+* **createRouter:** Add the store parameter to the customCreateRouter function ([#105](https://github.com/nuxt-community/router-module/issues/105)) ([d068f6e](https://github.com/nuxt-community/router-module/commit/d068f6e2991f39cf8dca68dc3a92bc19c1a38c85))
+
 ### [1.6.1](https://github.com/nuxt-community/router-module/compare/v1.6.0...v1.6.1) (2021-03-15)
 
 
