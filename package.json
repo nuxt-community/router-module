@@ -23,7 +23,7 @@
     "test": "yarn lint && yarn jest"
   },
   "dependencies": {
-    "consola": "^2.15.3",
+    "consola": "^3.2.3",
     "defu": "^5.0.0"
   },
   "devDependencies": {
