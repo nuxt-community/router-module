@@ -6,9 +6,21 @@
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-> Nuxt 2 module to use router.js instead of pages/ directory
+Nuxt 2 module to use router.js instead of pages/ directory
 
 [📖 **Release Notes**](./CHANGELOG.md)
+
+## Nuxt 3
+
+This is now possible to extend `vue-router` with Nuxt 3 with different methods, learn more on https://nuxt.com/docs/guide/going-further/custom-routing
+
+If you don't have the `pages/` directory, make sure to enable Vue Router with:
+
+```ts
+export default defineNuxtConfig({
+  pages: true
+})
+```
 
 ## Features
 
