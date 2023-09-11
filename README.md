@@ -6,7 +6,7 @@
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-> Nuxt.js module to use router.js instead of pages/ directory
+> Nuxt 2 module to use router.js instead of pages/ directory
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
