@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository is archived. `@nuxtjs/router` was built for Nuxt 2, which reached end of life on June 30, 2024.
+
 # @nuxtjs/router
 
 [![npm version][npm-version-src]][npm-version-href]
